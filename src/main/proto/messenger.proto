@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ru.au.yaveyn.sd.messenger";
+option java_outer_classname = "MessenegerProto";
+
+package ru.au.yaveyn.sd.messenger;
+
+service Messenger {
+  rpc Talk (Message) returns (Message) {}
+}
+
+message Message {
+  string name = 1;
+  string time = 2;
+  string message = 3;
+}
